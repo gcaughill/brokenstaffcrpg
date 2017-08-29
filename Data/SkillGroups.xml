@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Combat: Swords, Axes, Daggers, Polearms, Blunt (Maces, Hammers, Clubs), Bows, Crossbows, Thrown, Shield, Boxing / Hand to Hand
+	Athletics: Running, Climb, Swim, Jump, Ambidexterity (Dual wielding), Dodge, Parry (Deflect)
+	Rogue: Disable Traps, Lockpick, Sneak, Deathstrike (Assassin), Pickpocket
+	Knowledge / Lore: History / Civilizations, Mythology (Enemies), Item Lore, Diplomacy, Bartering, Alchemy, Enchanting, Smithing
+	Magic: Arcane, Divine, Nature, Mind, Fire, Water, Earth, Air, Mental, Divine
+	Special: ?
+-->
+<SkillGroups>
+  <SkillGroup>
+	<Id>combat</Id>
+    <Name>Combat</Name>
+    <Description>Combat</Description>
+  </SkillGroup>
+  <SkillGroup>
+	<Id>athletics</Id>
+    <Name>Athletics</Name>
+    <Description>Athletics</Description>
+  </SkillGroup>
+  <SkillGroup>
+	<Id>rogue</Id>
+    <Name>Rogue</Name>
+    <Description>Rogue</Description>
+  </SkillGroup>
+  <SkillGroup>
+	<Id>knowledge</Id>
+    <Name>Knowledge</Name>
+    <Description>Knowledge/Lore</Description>
+  </SkillGroup>
+  <SkillGroup>
+	<Id>magic</Id>
+    <Name>Magic</Name>
+    <Description>Magic</Description>
+  </SkillGroup>
+  <SkillGroup>
+	<Id>special</Id>
+    <Name>Special</Name>
+    <Description>Special skills</Description>
+  </SkillGroup>
+</SkillGroups>

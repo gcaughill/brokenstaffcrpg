@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	one - cantrips
+	two - minor
+	three - apprentice
+	four - journeyman
+	five - expert
+	six - master
+	seven - ancient
+-->
+<SpellLevels>
+  <SpellLevel>
+	<Id>one</Id>
+    <Name>Cantrips</Name>
+    <Description>Level one spells are commonly called cantrips, they are the weakest spells a spellcaster can master.</Description>
+  </SpellLevel>
+  <SpellLevel>
+	<Id>two</Id>
+    <Name>Minor</Name>
+    <Description>Level two spells are minor spells that are slightly more powerful than the cantrips the newest spellcasters start out with.</Description>
+  </SpellLevel>
+  <SpellLevel>
+	<Id>three</Id>
+    <Name>Apprentice</Name>
+    <Description>Level three spells are commonly called apprentice level spells. They show the spellcaster is progressing in prowess.</Description>
+  </SpellLevel>
+  <SpellLevel>
+	<Id>four</Id>
+    <Name>Journeyman</Name>
+    <Description>Level four spells are commonly called journeyman level spells. These are the most powerful spells cast by the average member of the spellcasting class.</Description>
+  </SpellLevel>
+  <SpellLevel>
+	<Id>five</Id>
+    <Name>Expert</Name>
+    <Description>Experts in a spellcasting class can cast these powerful spells.</Description>
+  </SpellLevel>
+  <SpellLevel>
+	<Id>six</Id>
+    <Name>Master</Name>
+    <Description>Level six spells are available only to those who have truly mastered their profession.</Description>
+  </SpellLevel>
+  <SpellLevel>
+	<Id>seven</Id>
+    <Name>Ancient</Name>
+    <Description>The most powerful spells available are those gleaned from the forbidden knowledge of the ancients.</Description>
+  </SpellLevel>
+</SpellLevels>

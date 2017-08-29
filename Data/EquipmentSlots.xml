@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Races can implement these and then characters would use them.
+-->
+<EquipmentSlots>
+	<Slot>
+		<Id>head</Id>
+		<Name>Head</Name>
+		<Description>For helmets or misc magic items like floating ion stones.</Description>
+	</Slot>
+	<Slot>
+		<Id>neck</Id>
+		<Name>Neck</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>eyes</Id>
+		<Name>Eyes</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>ears</Id>
+		<Name>Ears</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>body</Id>
+		<Name>Body</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>legs</Id>
+		<Name>Legs</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>feet</Id>
+		<Name>Feet</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>hands</Id>
+		<Name>Hands</Name>
+		<Description>For gauntlets or bracers.</Description>
+	</Slot>
+	<Slot>
+		<Id>lefthand</Id>
+		<Name>Left Hand</Name>
+		<Description>Often used for shields of off-hand weapons.</Description>
+		<ItemTypes>
+			<ItemType>
+				<Id>weapon</Id>
+			</ItemType>
+			<ItemType>
+				<Id>wand</Id>
+			</ItemType>
+			<ItemType>
+				<Id>shield</Id>
+			</ItemType>
+		</ItemTypes>
+	</Slot>
+	<Slot>
+		<Id>righthand</Id>
+		<Name>Right Hand</Name>
+		<Description>Often used for a weapon.</Description>
+		<ItemTypes>
+			<ItemType>
+				<Id>weapon</Id>
+			</ItemType>
+			<ItemType>
+				<Id>wand</Id>
+			</ItemType>
+			<ItemType>
+				<Id>shield</Id>
+			</ItemType>
+		</ItemTypes>
+	</Slot>
+	<Slot>
+		<Id>belt</Id>
+		<Name>Belt</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>cloak</Id>
+		<Name>Cloak</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>leftring</Id>
+		<Name>Left Ring</Name>
+		<Description></Description>
+	</Slot>
+	<Slot>
+		<Id>rightring</Id>
+		<Name>Right Ring</Name>
+		<Description></Description>
+	</Slot>
+</EquipmentSlots>

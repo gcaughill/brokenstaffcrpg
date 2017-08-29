@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+		Primary: main character attributes
+		Secondary: like hit points and stamina points
+		Derived: saves, extra
+		Resistances: ?
+-->
+<AttributeTypes>
+	<AttributeType>
+		<Id>primary</Id>
+		<Name>Primary</Name>
+		<Description>Primary Attributes</Description>
+	</AttributeType>
+	<AttributeType>
+		<Id>secondary</Id>
+		<Name>Secondary</Name>
+		<Description>Secondary attributes</Description>
+	</AttributeType>
+	<AttributeType>
+		<Id>derived</Id>
+		<Name>Derived</Name>
+		<Description>Derived attributes</Description>
+	</AttributeType>
+	<AttributeType>
+		<Id>resitance</Id>
+		<Name>Resistance</Name>
+		<Description>Resistances</Description>
+	</AttributeType>
+</AttributeTypes>

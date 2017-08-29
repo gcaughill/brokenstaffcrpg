@@ -1,0 +1,2877 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Damage: Damage Types & Attribute Damaged (HP,SP,MP)
+	Healing: Heal HP, Heal SP, Heal MP
+	Character: Give XP, Change Sex, Give Item, Remove Item, Set Attribute, Set Skill, Set Resistance, Set Saving Throw, Give Feat, Remove Feat
+	GameWorld: Open Lock, Teleport, Quest, Feather Fall, Levitate, Fly, Wizard Eye, Convert Item to Gold
+-->
+<Effects>	
+	<!-- Removing Existing Effects and Immunity to Effects -->
+	<Effect>
+		<Id>removemagic</Id>
+		<Name>Remove Magic</Name>
+		<Description>Attempts to remove one random non-permanent magic effect on the target.</Description>
+		<Type>removemagic</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>removeallmagic</Id>
+		<Name>Remove All Magic</Name>
+		<Description>Attempts to remove all the non-permanent magic effects on the target.</Description>
+		<Type>removeallmagic</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>immunity</Id>
+		<Name>Immunity to Effect</Name>
+		<Description>Causes target to be immune to another effect.</Description>
+		<Type>immunity</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>		
+
+	<!-- Healing and Temporary Attributes -->
+	<Effect>
+		<Id>temporaryhp</Id>
+		<Name>Temporary HP</Name>
+		<Description>Grants temporary health points.</Description>
+		<Type>fortifyattribute</Type>
+		<Attribute>hp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>hpbonus</Id>
+		<Name>HP Bonus</Name>
+		<Description>A bonus or penalty to health points.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>hp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spbonus</Id>
+		<Name>SP Bonus</Name>
+		<Description>A bonus or penalty to stamina points.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>sp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>mpbonus</Id>
+		<Name>MP Bonus</Name>
+		<Description>A bonus or penalty to magic points.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>mp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>healhp</Id>
+		<Name>Heal HP</Name>
+		<Description>Heal health points.</Description>
+		<Type>healing</Type>
+		<Attribute>hp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>healsp</Id>
+		<Name>Heal SP</Name>
+		<Description>Heal stamina points.</Description>
+		<Type>healing</Type>
+		<Attribute>sp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>healmp</Id>
+		<Name>Heal MP</Name>
+		<Description>Heal magic points.</Description>
+		<Type>healing</Type>
+		<Attribute>mp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>hpregen</Id>
+		<Name>HP Regen</Name>
+		<Description>Regeneration of health points.</Description>
+		<Type>regeneration</Type>
+		<Attribute>hp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spregen</Id>
+		<Name>SP Regen</Name>
+		<Description>Regeneration of stamina points.</Description>
+		<Type>regeneration</Type>
+		<Attribute>sp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>mpregen</Id>
+		<Name>MP Regen</Name>
+		<Description>Regeneration of magic points.</Description>
+		<Type>regeneration</Type>
+		<Attribute>mp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>drainhp</Id>
+		<Name>Drain HP</Name>
+		<Description>Drain health points from target.</Description>
+		<Type>drain</Type>
+		<Attribute>hp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drainsp</Id>
+		<Name>Drain SP</Name>
+		<Description>Drain stamina points from target.</Description>
+		<Type>drain</Type>
+		<Attribute>sp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drainmp</Id>
+		<Name>Drain MP</Name>
+		<Description>Drain magic points from target.</Description>
+		<Type>drain</Type>
+		<Attribute>mp</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drainstrength</Id>
+		<Name>Absorb Strenth</Name>
+		<Description>Drain strength from target.</Description>
+		<Type>drain</Type>
+		<Attribute>strength</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drainvitality</Id>
+		<Name>Absorb Vitality</Name>
+		<Description>Drain vitality from target.</Description>
+		<Type>drain</Type>
+		<Attribute>vitality</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>draindexterity</Id>
+		<Name>Absorb Dexterity</Name>
+		<Description>Drain dexterity from target.</Description>
+		<Type>drain</Type>
+		<Attribute>dexterity</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drainspeed</Id>
+		<Name>Absorb Speed</Name>
+		<Description>Drain speed from target.</Description>
+		<Type>drain</Type>
+		<Attribute>speed</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drainintelligence</Id>
+		<Name>Absorb Intelligence</Name>
+		<Description>Drain intelligence from target.</Description>
+		<Type>drain</Type>
+		<Attribute>intelligence</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drainwisdom</Id>
+		<Name>Absorb Wisdom</Name>
+		<Description>Drain wisdom from target.</Description>
+		<Type>drain</Type>
+		<Attribute>wisdom</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>draincharisma</Id>
+		<Name>Absorb Charisma</Name>
+		<Description>Drain charisma from target.</Description>
+		<Type>drain</Type>
+		<Attribute>charisma</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>raisedead</Id>
+		<Name>raisedead</Name>
+		<Description>Raises dead targets to life.</Description>
+		<Type>raisedead</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>weightallowancebonus</Id>
+		<Name>Weight Allowance Bonus</Name>
+		<Description>Bonus to the amount a character can carry.</Description>
+		<Type>character</Type>
+		<Attribute>weightallowance</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>givexp</Id>
+		<Name>Give XP</Name>
+		<Description>Give character experience points.</Description>
+		<Type>character</Type>
+		<Attribute>experience</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>extraattacks</Id>
+		<Name>Extra Attacks</Name>
+		<Description>A chance to do extra attacks in combat.</Description>
+		<Type>attacks</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>extraoffhandattacks</Id>
+		<Name>Extra Offhand Attacks</Name>
+		<Description>A chance to do extra off-hand attacks for those that dual-wield in combat.</Description>
+		<Type>attackoffhandattacks</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>armorclass</Id>
+		<Name>Armor Class</Name>
+		<Description>A bonus or penalty to armor class.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>armorclass</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>initiative</Id>
+		<Name>Initiative Bonus</Name>
+		<Description>A bonus or penalty to initiative.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>initiative</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>fortitudebonus</Id>
+		<Name>Fortitude Bonus</Name>
+		<Description>A bonus or penalty to fortitude.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>fortitude</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>reflexbonus</Id>
+		<Name>Reflex Bonus</Name>
+		<Description>A bonus or penalty to reflex.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>reflex</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>willpowerbonus</Id>
+		<Name>Willpower Bonus</Name>
+		<Description>A bonus or penalty to willpower.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>willpower</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>strengthbonus</Id>
+		<Name>Strength Bonus</Name>
+		<Description>A bonus or penalty to strength.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>strength</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>vitalitybonus</Id>
+		<Name>Vitality Bonus</Name>
+		<Description>A bonus or penalty to vitality.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>vitality</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>dexteritybonus</Id>
+		<Name>Dexterity Bonus</Name>
+		<Description>A bonus or penalty to dexterity.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>dexterity</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>speedbonus</Id>
+		<Name>Speed Bonus</Name>
+		<Description>A bonus or penalty to speed.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>speed</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>intelligencebonus</Id>
+		<Name>Intelligence Bonus</Name>
+		<Description>A bonus or penalty to intelligence.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>intelligence</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>wisdombonus</Id>
+		<Name>Wisdom Bonus</Name>
+		<Description>A bonus or penalty to wisdom.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>wisdom</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>charismabonus</Id>
+		<Name>Charisma Bonus</Name>
+		<Description>A bonus or penalty to charisma.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>charisma</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>virtuebonus</Id>
+		<Name>Virtue Bonus</Name>
+		<Description>A bonus or penalty to virtue.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>virtue</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!--
+			combat skills: swords, axes, daggers, polearms, blunt, bows, crossbows, thrown, shield, boxing
+			athletics skills: running, climb, swim, jump, ambidexterity, dodge, parry
+			rogue skills: disabletraps, lockpick, sneak, pickpocket, deathstrike
+			knowledge / lore skills: history, mythology, itemlore, diplomacy, bartering, alchemy, enchanting, smithing
+			magic skills: arcane, holy, nature, mind, fire, water, earth, air, mental, divine
+	-->
+	<Effect>
+		<Id>swordsbonus</Id>
+		<Name>Swords Bonus</Name>
+		<Description>A bonus or penalty to the swords skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>swords</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>axesbonus</Id>
+		<Name>Axes Bonus</Name>
+		<Description>A bonus or penalty to the axes skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>axes</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>daggersbonus</Id>
+		<Name>Daggers Bonus</Name>
+		<Description>A bonus or penalty to the daggers skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>daggers</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>polearmsbonus</Id>
+		<Name>Polearms Bonus</Name>
+		<Description>A bonus or penalty to the polearms skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>polearms</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bluntbonus</Id>
+		<Name>Blunt Bonus</Name>
+		<Description>A bonus or penalty to the blunt skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>blunt</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bowsbonus</Id>
+		<Name>Bows Bonus</Name>
+		<Description>A bonus or penalty to the bows skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>bows</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>crossbowsbonus</Id>
+		<Name>Crossbows Bonus</Name>
+		<Description>A bonus or penalty to the crossbows skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>crossbows</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>thrownbonus</Id>
+		<Name>Thrown Bonus</Name>
+		<Description>A bonus or penalty to the thrown skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>thrown</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>shieldbonus</Id>
+		<Name>Shield Bonus</Name>
+		<Description>A bonus or penalty to the shield skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>shield</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>martialartsbonus</Id>
+		<Name>Hand-to-hand Bonus</Name>
+		<Description>A bonus or penalty to the hand-to-hand combat skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>martialarts</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>runningbonus</Id>
+		<Name>Running Bonus</Name>
+		<Description>A bonus or penalty to the running skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>running</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>climbbonus</Id>
+		<Name>Climbing Bonus</Name>
+		<Description>A bonus or penalty to the climbing skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>climb</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>swimbonus</Id>
+		<Name>Swimming Bonus</Name>
+		<Description>A bonus or penalty to the swimming skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>swim</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>jumpbonus</Id>
+		<Name>Jumping Bonus</Name>
+		<Description>A bonus or penalty to the jumping skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>jump</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>scoutingbonus</Id>
+		<Name>Scouting Bonus</Name>
+		<Description>A bonus or penalty to the scouting skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>scouting</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>ambidexteritybonus</Id>
+		<Name>Ambidexterity Bonus</Name>
+		<Description>A bonus or penalty to the ambidexterity skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>ambidexterity</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>dodgebonus</Id>
+		<Name>Dodging Bonus</Name>
+		<Description>A bonus or penalty to the dodging skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>dodge</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>parrybonus</Id>
+		<Name>Parry Bonus</Name>
+		<Description>A bonus or penalty to the parry skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>deflect</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>disabletrapsbonus</Id>
+		<Name>Disable Traps Bonus</Name>
+		<Description>A bonus or penalty to the disable traps skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>disabletraps</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>picklockbonus</Id>
+		<Name>Lockpick Bonus</Name>
+		<Description>A bonus or penalty to the lock picking skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>picklock</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>sneakbonus</Id>
+		<Name>Sneak Bonus</Name>
+		<Description>A bonus or penalty to the sneaking skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>sneak</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>pickpocketbonus</Id>
+		<Name>Pickpocket Bonus</Name>
+		<Description>A bonus or penalty to the pick pocketing skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>pickpocket</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>performbonus</Id>
+		<Name>Perform Bonus</Name>
+		<Description>A bonus or penalty to the perform skill used by bards.</Description>
+		<Type>skillbonus</Type>
+		<Skill>perform</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>deathstrikebonus</Id>
+		<Name>Ddeathstrike Bonus</Name>
+		<Description>A bonus or penalty to the deathstrike skill used by assassins.</Description>
+		<Type>skillbonus</Type>
+		<Skill>deathstrike</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>historybonus</Id>
+		<Name>History Bonus</Name>
+		<Description>A bonus or penalty to the history skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>history</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>mythologybonus</Id>
+		<Name>Mythology Bonus</Name>
+		<Description>A bonus or penalty to the mythology skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>mythology</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>artifactsbonus</Id>
+		<Name>Artifacts Bonus</Name>
+		<Description>A bonus or penalty to the artifacts skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>artifacts</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>diplomacybonus</Id>
+		<Name>Diplomacy Bonus</Name>
+		<Description>A bonus or penalty to the diplomacy skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>diplomacy</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>barteringbonus</Id>
+		<Name>Bartering Bonus</Name>
+		<Description>A bonus or penalty to the bartering skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>bartering</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>scoutingbonus</Id>
+		<Name>Scouting Bonus</Name>
+		<Description>A bonus or penalty to the scouting skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>scouting</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>alchemybonus</Id>
+		<Name>Alchemy Bonus</Name>
+		<Description>A bonus or penalty to the alchemy crafting skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>alchemy</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>enchantingbonus</Id>
+		<Name>Enchanting Bonus</Name>
+		<Description>A bonus or penalty to the enchanting crafting skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>enchanting</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>smithingbonus</Id>
+		<Name>Blacksmithing Bonus</Name>
+		<Description>A bonus or penalty to the blacksmithing crafting skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>smithing</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>arcanebonus</Id>
+		<Name>Arcane Bonus</Name>
+		<Description>A bonus or penalty to the arcane magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>arcane</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>holybonus</Id>
+		<Name>Holy Magic Bonus</Name>
+		<Description>A bonus or penalty to the holy magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>holy</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>naturebonus</Id>
+		<Name>Nature Bonus</Name>
+		<Description>A bonus or penalty to the nature magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>nature</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>mindbonus</Id>
+		<Name> Bonus</Name>
+		<Description>A bonus or penalty to the mind magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill></Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>firebonus</Id>
+		<Name>Fire Bonus</Name>
+		<Description>A bonus or penalty to the fire magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill></Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>waterbonus</Id>
+		<Name>Water Bonus</Name>
+		<Description>A bonus or penalty to the water magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>water</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>earthbonus</Id>
+		<Name>Earth Bonus</Name>
+		<Description>A bonus or penalty to the earth magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>earth</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>airbonus</Id>
+		<Name>Air Bonus</Name>
+		<Description>A bonus or penalty to the air magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>air</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>mentalbonus</Id>
+		<Name>Mental Bonus</Name>
+		<Description>A bonus or penalty to the mental magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>mental</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>divinebonus</Id>
+		<Name>Divine Bonus</Name>
+		<Description>A bonus or penalty to the divine magic skill.</Description>
+		<Type>skillbonus</Type>
+		<Skill>divine</Skill>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	
+	<Effect>
+		<Id>makeattack</Id>
+		<Name>Attack</Name>
+		<Description>Causes doer to make their regular combat attack.</Description>
+		<Type>makeattack</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>counterstrike</Id> <!-- percent, use regular weapon or do custom (ie. shield bash) -->
+		<Name>Counterstrike</Name>
+		<Description>Causes doer to make an attack when they are attacked.</Description>
+		<Type>counterstrike</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>cleave</Id>
+		<Name>Cleave</Name>
+		<Description>Characters with this ability have a chance to make an extra attack in combat.</Description>
+		<Type>cleave</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>attackbonus</Id>
+		<Name>Attack Bonus</Name>
+		<Description>A bonus or penalty to hit in combat.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>attack</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>damagebonus</Id>
+		<Name>Damage Bonus</Name>
+		<Description>A bonus to physical damage done in combat. The same type of damage done as the weapon</Description>
+		<Type>damagebonus</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!-- Cause Damage -->
+	<Effect>
+		<Id>slashingdamage</Id>
+		<Name>Slashing Damage</Name>
+		<Description>Slashing damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>slashing</DamageType>
+		<ResistanceType>slashing</ResistanceType>		
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>piercingdamage</Id>
+		<Name>Piercing Damage</Name>
+		<Description>Piercing damage to health points</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>piercing</DamageType>
+		<ResistanceType>piercing</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bluntdamage</Id>
+		<Name>Blunt Damage</Name>
+		<Description>Blunt damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>blunt</DamageType>
+		<ResistanceType>blunt</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>firedamage</Id>
+		<Name>Fire Damage</Name>
+		<Description>Fire damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>fire</DamageType>
+		<ResistanceType>fire</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>waterdamage</Id>
+		<Name>Water Damage</Name>
+		<Description>Water damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>water</DamageType>
+		<ResistanceType>water</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>nucleardamage</Id>
+		<Name>Hellfire Damage</Name>
+		<Description>Hellfire damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>nuclear</DamageType>
+		<ResistanceType>nuclear</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>icedamage</Id>
+		<Name>Ice Damage</Name>
+		<Description>Ice damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>ice</DamageType>
+		<ResistanceType>ice</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>aciddamage</Id>
+		<Name>Acid Damage</Name>
+		<Description>Acid damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>acid</DamageType>
+		<ResistanceType>acid</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>lightningdamage</Id>
+		<Name>Lightning Damage</Name>
+		<Description>Lightning damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>lightning</DamageType>
+		<ResistanceType>lightning</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>energydamage</Id>
+		<Name>Magical Damage</Name>
+		<Description>Magical damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>energy</DamageType>
+		<ResistanceType>energy</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>holydamage</Id>
+		<Name>Holy Damage</Name>
+		<Description>Holy damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>holy</DamageType>
+		<ResistanceType>holy</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>unholydamage</Id>
+		<Name>Unholy Damage</Name>
+		<Description>Unholy damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>unholy</DamageType>
+		<ResistanceType>unholy</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>poisondamage</Id>
+		<Name>Poison Damage</Name>
+		<Description>Poison damage to health points.</Description>
+		<Type>damage</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>poison</DamageType>
+		<ResistanceType>poison</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!-- Damage Caused Bonuses -->
+	<Effect>
+		<Id>slashingdamagebonus</Id>
+		<Name>Slashing Damage Bonus</Name>
+		<Description>Bonus slashing damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>slashing</DamageType>
+		<ResistanceType>slashing</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>piercingdamagebonus</Id>
+		<Name>Piercing Damage Bonus</Name>
+		<Description>Bonus ice damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>piercing</DamageType>
+		<ResistanceType>piercing</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bluntdamagebonus</Id>
+		<Name>Blunt Damage Bonus</Name>
+		<Description>Bonus lightning damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>blunt</DamageType>
+		<ResistanceType>blunt</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>firedamagebonus</Id>
+		<Name>Fire Damage Bonus</Name>
+		<Description>Bonus fire damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>fire</DamageType>
+		<ResistanceType>fire</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>icedamagebonus</Id>
+		<Name>Ice Damage Bonus</Name>
+		<Description>Bonus ice damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>ice</DamageType>
+		<ResistanceType>ice</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>lightningdamagebonus</Id>
+		<Name>Lightning Damage Bonus</Name>
+		<Description>Bonus lightning damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>lightning</DamageType>
+		<ResistanceType>lightning</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>aciddamagebonus</Id>
+		<Name>Acid Damage Bonus</Name>
+		<Description>Bonus acid damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>acid</DamageType>
+		<ResistanceType>acid</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>energydamagebonus</Id>
+		<Name>Energy Damage Bonus</Name>
+		<Description>Bonus magical damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>energy</DamageType>
+		<ResistanceType>energy</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>nucleardamagebonus</Id>
+		<Name>Hellfire Damage Bonus</Name>
+		<Description>Bonus hellfire damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>nuclear</DamageType>
+		<ResistanceType>nuclear</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>holydamagebonus</Id>
+		<Name>Holy Damage Bonus</Name>
+		<Description>Bonus holy damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>holy</DamageType>
+		<ResistanceType>holy</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>unholydamagebonus</Id>
+		<Name>Unholy Damage Bonus</Name>
+		<Description>Bonus unholy damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>unholy</DamageType>
+		<ResistanceType>unholy</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>poisondamagebonus</Id>
+		<Name>Poison Damage Bonus</Name>
+		<Description>Bonus poison damage when the character makes an attack.</Description>
+		<Type>damagebonus</Type>
+		<Attribute>hp</Attribute>
+		<DamageType>poison</DamageType>
+		<ResistanceType>poison</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>nasseabonus</Id>
+		<Name>Nassea Bonus</Name>
+		<Description>When the character makes an attack also a chance of nassea.</Description>
+		<Type>attackbonus</Type>
+		<Effect>nassea</Effect>
+		<ResistanceType>fortitude</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>leveldrainbonus</Id>
+		<Name>Level Drain Bonus</Name>
+		<Description>When the character makes an attack also a chance of level drain.</Description>
+		<Type>attackbonus</Type>
+		<Effect>drainhp</Effect>
+		<ResistanceType>fortitude</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>vampiricbonus</Id>
+		<Name>Vampiric Bonus</Name>
+		<Description>When the character makes an attack also drains health points.</Description>
+		<Type>attackbonus</Type>
+		<Effect>drainhp</Effect>
+		<ResistanceType>energy</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!-- Damage Resistance -->
+	<Effect>
+		<Id>slashingresistancebonus</Id>
+		<Name>Slashing Resistance Bonus</Name>
+		<Description>Slashing resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>slashing</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>piercingresistancebonus</Id>
+		<Name>Piercing Resistance Bonus</Name>
+		<Description>Piercing resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>piercing</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bluntresistancebonus</Id>
+		<Name>Blunt Resistance Bonus</Name>
+		<Description>Blunt resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>blunt</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>silverresistancebonus</Id>
+		<Name>Silver Resistance Bonus</Name>
+		<Description>Resistance bonus or penalty to silver. Werewolves and Wampyri are weak against silver.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>silver</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>fireresistancebonus</Id>
+		<Name>Fire Resistance Bonus</Name>
+		<Description>Fire resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>fire</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>waterresistancebonus</Id>
+		<Name>Water Resistance Bonus</Name>
+		<Description>Water resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>water</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>nuclearresistancebonus</Id>
+		<Name>Hellfire Resistance Bonus</Name>
+		<Description>Hellfire resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>nuclear</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>iceresistancebonus</Id>
+		<Name>Ice Resistance Bonus</Name>
+		<Description>Ice resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>ice</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>acidresistancebonus</Id>
+		<Name>Acid Resistance Bonus</Name>
+		<Description>Acid resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>acid</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>lightningresistancebonus</Id>
+		<Name>Lightning Resistance Bonus</Name>
+		<Description>Lightning resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>lighting</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>energyresistancebonus</Id>
+		<Name>Magical Resistance Bonus</Name>
+		<Description>Magical resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>energy</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>holyresistancebonus</Id>
+		<Name>Holy Damage</Name>
+		<Description>Holy resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>holy</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>unholyresistancebonus</Id>
+		<Name>Unholy Resistance Bonus</Name>
+		<Description>Unholy resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>unholy</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>poisonresistancebonus</Id>
+		<Name>Poison Resistance Bonus</Name>
+		<Description>Poison resistance bonus or penalty.</Description>
+		<Type>attributebonus</Type>
+		<Attribute>poison</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	
+	<!-- Spells -->
+	<Effect>
+		<Id>spellscausefiredamage</Id>
+		<Name>Spells Cause fire Damage</Name>
+		<Description>Characters spells cause fire damage on top of their normal damage.</Description>
+		<Type>spellscausefiredamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscausewaterdamage</Id>
+		<Name>Spells Cause water Damage</Name>
+		<Description>Characters spells cause water damage on top of their normal damage.</Description>
+		<Type>spellscausewaterdamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscausenucleardamage</Id>
+		<Name>Spells Cause nuclear Damage</Name>
+		<Description>Characters spells cause nuclear damage on top of their normal damage.</Description>
+		<Type>spellscausenucleardamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscauseicedamage</Id>
+		<Name>Spells Cause ice Damage</Name>
+		<Description>Characters spells cause ice damage on top of their normal damage.</Description>
+		<Type>spellscauseicedamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscauseaciddamage</Id>
+		<Name>Spells Cause acid Damage</Name>
+		<Description>Characters spells cause acid damage on top of their normal damage.</Description>
+		<Type>spellscauseaciddamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscauselightningdamage</Id>
+		<Name>Spells Cause lightning Damage</Name>
+		<Description>Characters spells cause lightning damage on top of their normal damage.</Description>
+		<Type>spellscauselightningdamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscauseenergydamage</Id>
+		<Name>Spells Cause energy Damage</Name>
+		<Description>Characters spells cause energy damage on top of their normal damage.</Description>
+		<Type>spellscauseenergydamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscauseholydamage</Id>
+		<Name>Spells Cause holy Damage</Name>
+		<Description>Characters spells cause holy damage on top of their normal damage.</Description>
+		<Type>spellscauseholydamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscauseunholydamage</Id>
+		<Name>Spells Cause unholy Damage</Name>
+		<Description>Characters spells cause unholy damage on top of their normal damage.</Description>
+		<Type>spellscauseunholydamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscausepoisondamage</Id>
+		<Name>Spells Cause poison Damage</Name>
+		<Description>Characters spells cause poison damage on top of their normal damage.</Description>
+		<Type>spellscausepoisondamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscausebluntdamage</Id>
+		<Name>Spells Cause Force Damage</Name>
+		<Description>Characters spells cause force damage on top of their normal damage.</Description>
+		<Type>spellscausebluntdamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+
+	<Effect>
+		<Id>randomspell</Id>
+		<Name>Random Spell</Name>
+		<Description>Causes doer to cast a random spell if they are able.</Description>
+		<Type>randomspell</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellsreducesavingthrow</Id>
+		<Name>Reduce Saving Throw</Name>
+		<Description>Characters spells from the selected spellbook are saved at a penalty due to their power.</Description>
+		<Type>spellsreducesavingthrow</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellsreduceresistance</Id>
+		<Name>Reduce Resistance</Name>
+		<Description>Characters spells from the selected spellbook that cause damage bypass part of the resistance due to their power.</Description>
+		<Type>spellsreduceresistance</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscostless</Id>
+		<Name>Spells Cost Less</Name>
+		<Description>Characters spells from the selected spellbook cost less MP due to their efficiency in that school.</Description>
+		<Type>spellscostless</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>spellscausemoredamage</Id>
+		<Name>Spells Cause More Damage</Name>
+		<Description>Characters spells from the selected spellbook cause more damage due to their power.</Description>
+		<Type>spellscausemoredamage</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!-- Light and vision -->
+	<Effect>
+		<Id>light</Id>
+		<Name>Light</Name>
+		<Description>Creates a magical light.</Description>
+		<Type>light</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>darkness</Id>
+		<Name>Darkness</Name>
+		<Description>Causes magical darkness that blinds those without darkvision.</Description>
+		<Type>darkness</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>darkvision</Id>
+		<Name>Darkvision</Name>
+		<Description>Lets the target see in the dark.</Description>
+		<Type>darkvision</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>invisibility</Id>
+		<Name>Invisibility</Name>
+		<Description>Causes the target to become invisible.</Description>
+		<Type>invisibility</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>trueseeing</Id>
+		<Name>True Seeing</Name>
+		<Description>Can see invisible objects, sneaking foes and through magical and normal darkness.</Description>
+		<Type>trueseeing</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>contingency</Id>
+		<Name>Contingency</Name>
+		<Description>If the character dies they get auto-ressurected.</Description>
+		<Type>contingency</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>summon</Id>
+		<Name>Summon Creature</Name>
+		<Description>Summons a magical creature for a period of time.</Description>
+		<Type>summon</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>timestop</Id>
+		<Name>Time Stop</Name>
+		<Description>Caster gets to act alone for a number of seconds.</Description>
+		<Type>timestop</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>timetravel</Id>
+		<Name>Time Travel</Name>
+		<Description>Going back or forward in time.</Description>
+		<Type>timetravel</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>changesex</Id>
+		<Name>Change Sex</Name>
+		<Description>Change character's sex.</Description>
+		<Type>attributechange</Type>
+		<Attribute>sex</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!-- Negative Effects -->
+	<Effect>
+		<Id>leveldrain</Id>
+		<Name>Level Drain</Name>
+		<Description>Causes target to lose levels.</Description>
+		<Type>leveldrain</Type>
+		<ResistanceType>fortitude</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>disease</Id>
+		<Name>Disease</Name>
+		<Description>Causes target to become diseased, which causes a number of ailments.</Description>
+		<Type>disease</Type>
+		<ResistanceType>fortitude</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>fear</Id>
+		<Name>Fear</Name>
+		<Description>Causes target to be afraid.</Description>
+		<Type>fear</Type>
+		<ResistanceType>willpower</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>insanity</Id>
+		<Name>Insanity</Name>
+		<Description>Causes target to be insane.</Description>
+		<Type>insane</Type>
+		<ResistanceType>willpower</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>confusion</Id>
+		<Name>Confusion</Name>
+		<Description>Causes target to be confused.</Description>
+		<Type>confused</Type>
+		<ResistanceType>willpower</ResistanceType>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>sleep</Id>
+		<Name>Sleep</Name>
+		<Description>Attempts to put one or more targets to sleep.</Description>
+		<Type>sleep</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>nausea</Id>
+		<Name>Nausea</Name>
+		<Description>Each round has a change of debilitating target or making their attacks worthless.</Description>
+		<Type>nausea</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>silence</Id>
+		<Name>Silence</Name>
+		<Description>Attempts to make one or more targets unable to cast spells.</Description>
+		<Type>silence</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>blind</Id>
+		<Name>Blind</Name>
+		<Description>Attempts to blind one or more targets.</Description>
+		<Type>blind</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>deaf</Id>
+		<Name>Deaf</Name>
+		<Description>Attempts to make deaf one or more targets. Deaf targets have a 50% spellcasting failure rate.</Description>
+		<Type>deaf</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>curse</Id>
+		<Name>Curse</Name>
+		<Description>Item cannot be unequipped.</Description>
+		<Type>curse</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>stun</Id>
+		<Name>Stun</Name>
+		<Description>Attempts to stun one or more targets.</Description>
+		<Type>stun</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>stasis</Id>
+		<Name>Stasis</Name>
+		<Description>Attempts to put one or more targets in stasis, stunning them and making them immune to harm.</Description>
+		<Type>stasis</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>calm</Id>
+		<Name>Calm</Name>
+		<Description>Attempts to calm one or more targets, rendering them unable to attack but otherwise normal.</Description>
+		<Type>calm</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>control</Id>
+		<Name>Control</Name>
+		<Description>Attempts to control one or more targets.</Description>
+		<Type>control</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>petrification</Id>
+		<Name>Petrification</Name>
+		<Description>Attempts to turn a target to stone.</Description>
+		<Type>petrification</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>kill</Id>
+		<Name>Kill</Name>
+		<Description>Attempts to kill one or more targets.</Description>
+		<Type>kill</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>drunk</Id>
+		<Name>Drunk</Name>
+		<Description>This is what you get for drinking too much.</Description>
+		<Type>drunk</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>high</Id>
+		<Name>High</Name>
+		<Description>Imbibing substances can really mess you up.</Description>
+		<Type>high</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!-- Spell Protection -->
+	<Effect>
+		<Id>spellimmunity</Id>
+		<Name>Immunity to Spells</Name>
+		<Description>Causes target to be immune to spells that are equal or lesser in level to the given value.</Description>
+		<Type>spellimmunity</Type> <!-- value = maximum level of spells immune to, duration -->
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>spellabsorption</Id>
+		<Name>Spell Absorption</Name>
+		<Description>Causes target to be immune to spells that are equal or lesser in level to the given value. Hostile spells restore a characters spell points by their casting cost.</Description>
+		<Type>spellabsorption</Type> <!-- value = maximum level of spells immune to, duration -->
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>spellshielding</Id>
+		<Name>Spell Shielding</Name>
+		<Description>Stops the next X levels of hostile spells the target would have been hit with.</Description>
+		<Type>spellshielding</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>reflectspell</Id>
+		<Name>Spell Reflection</Name>
+		<Description>Reflects the next X levels of hostile spells the target would have been hit with back to their casters.</Description>
+		<Type>reflectspell</Type> <!-- value = maximum level of spells immune to, duration -->
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	
+	<!-- Physical Damage Protection -->
+	<Effect>
+		<Id>damageshield</Id>
+		<Name>Damage Shielding</Name>
+		<Description>Stops the next X amount of damage the target would have received.</Description>
+		<Type>damageshield</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>fireshield</Id>
+		<Name>Fire Shield</Name>
+		<Description>Gives 100% resistance to fire and damages enemies with fiery bursts that attack the user in hand to hand combat.</Description>
+		<Type>fireshield</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>hellfireshield</Id>
+		<Name>Hellfire Shield</Name>
+		<Description>Gives 100% resistance to fire and damages enemies with bursts of hellfire that attack the user in hand to hand combat.</Description>
+		<Type>hellfireshield</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>acidicshield</Id>
+		<Name>Acid Shield</Name>
+		<Description>Gives 100% resistance to acid and damages enemies with acidic bursts that attack the user in hand to hand combat.</Description>
+		<Type>acidicshield</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>mirrorimage</Id>
+		<Name>Mirror Image</Name>
+		<Description>Creates 1 or more images of the caster, enemies will possible attack the mirror instead of the caster while the effect is running.</Description>
+		<Type>mirrorimage</Type> <!-- value = number of images, duration = length of effect -->
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+
+	<!-- Class and racial effects -->
+	<Effect>
+		<Id>lingeringsong</Id>
+		<Name>Lingering Song</Name>
+		<Description>Makes the singers songs last longer.</Description>
+		<Type>lingeringsong</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>dwarvenresistpoison</Id>
+		<Name>Dwarve's Poison Resistance</Name>
+		<Description>Dwarves get an extra poison resistance.</Description>
+		<Type>character</Type>
+		<Attribute>poison</Attribute>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<!-- Movement effects -->	
+	<Effect>
+		<Id>recallstart</Id>
+		<Name>Teleport: Starting Location</Name>
+		<Description>Causes the party to return to the starting point of the adventure.</Description>
+		<Type>recallstart</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>teleport</Id>
+		<Name>Teleport</Name>
+		<Description>Causes the party to teleport to a previously visited location set by the adventure.</Description>
+		<Type>teleport</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>divineintervention</Id>
+		<Name>Divine Intervention</Name>
+		<Description>Causes the party to teleport to the nearest church or cathedral.</Description>
+		<Type>divineintervention</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>mark</Id>
+		<Name>Mark</Name>
+		<Description>Causes the party to mark a location for the recall effect to teleport to.</Description>
+		<Type>mark</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>recall</Id>
+		<Name>Recall</Name>
+		<Description>Causes the party to teleport to a previously marked location.</Description>
+		<Type>recall</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>featherfall</Id>
+		<Name>Feather Fall</Name>
+		<Description>Causes the party to take less damage while falling.</Description>
+		<Type>featherfall</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>levitate</Id>
+		<Name>Levitate</Name>
+		<Description>Can levitate up or down and causes the party to take no damage from falling.</Description>
+		<Type>levitate</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>fly</Id>
+		<Name>Fly</Name>
+		<Description>Allows the party to fly.</Description>
+		<Type>fly</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>waterwalk</Id>
+		<Name>Walk on Water</Name>
+		<Description>Group can walk on shallow water.</Description>
+		<Type>waterwalk</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>waterbreathing</Id>
+		<Name>Walk on Water</Name>
+		<Description>Group can breath underwater.</Description>
+		<Type>waterbreathing</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>float</Id>
+		<Name>Float</Name>
+		<Description>Group hovers thereby being protected from pit traps.</Description>
+		<Type>float</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>wizardeye</Id>
+		<Name>Clairvoyance</Name>
+		<Description>Conjures and eagle eye view of the surrounding terrain.</Description>
+		<Type>wizardeye</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	
+	<!-- Item effects -->
+	<Effect>
+		<Id>createitem</Id>
+		<Name>Create Item</Name>
+		<Description>Creates an item.</Description>
+		<Type>createitem</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>destroyitem</Id>
+		<Name>Destroy Item</Name>
+		<Description>Destroys an item.</Description>
+		<Type>destroyitem</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>transformitem</Id>
+		<Name>Transform</Name>
+		<Description>Transforms an item into another item.</Description>
+		<Type>transformitem</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>itemtogold</Id>
+		<Name>Convert Item to Gold</Name>
+		<Description>Transforms an item into an amount of gold.</Description>
+		<Type>itemtogold</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	
+
+	<!-- Meta Effects -->
+	<Effect>
+		<Id>removeeffect</Id>
+		<Name>Remove Effect</Name>
+		<Description>Causes target to lose one effect.</Description>
+		<Type>removeeffect</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>readmind</Id>
+		<Name>Read Mind</Name>
+		<Description>Attempts to read the subjects mind.</Description>
+		<Type>readmind</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>tracking</Id>
+		<Name>Tracking</Name>
+		<Description>Attempts to locate an enemy.</Description>
+		<Type>tracking</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>Yes</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>Yes</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>equipitem</Id>
+		<Name>Equip Item</Name>
+		<Description>Can equip an item they normally couldnt.</Description>
+		<Type>equipitem</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	
+	<!-- Character bonuses -->
+	<Effect>
+		<Id>bonusattribute</Id>
+		<Name>Give Bonus Attribute</Name>
+		<Description>Give the character a bonus attribute point.</Description>
+		<Type>bonus</Type>		
+		<Bonus>attribute</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>bonusfeat</Id>
+		<Name>Give Bonus Feat</Name>
+		<Description>Give the character a bonus feat.</Description>
+		<Type>bonus</Type>		
+		<Bonus>feat</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+	<Effect>
+		<Id>bonusspell</Id>
+		<Name>Give Bonus Spell</Name>
+		<Description>Give the character a bonus spell.</Description>
+		<Type>bonus</Type>		
+		<Bonus>spell</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bonusskillpoint</Id>
+		<Name>Give Bonus Skill Points</Name>
+		<Description>Give the character bonus general skill points that can be used for any type of skill point buy.</Description>
+		<Type>bonus</Type>		
+		<Bonus>skillpoint</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bonuscombatskillpoint</Id>
+		<Name>Give Bonus Combat Skill Points</Name>
+		<Description>Give the character bonus combat skill points.</Description>
+		<Type>bonus</Type>		
+		<Bonus>combatskillpoint</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bonusathleticsskillpoint</Id>
+		<Name>Give Bonus Athletics Skill Points</Name>
+		<Description>Give the character bonus athletics skill points.</Description>
+		<Type>bonus</Type>		
+		<Bonus>athleticsskillpoint</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bonusrogueskillpoint</Id>
+		<Name>Give Bonus Rogue Skill Points</Name>
+		<Description>Give the character bonus rogue skill points.</Description>
+		<Type>bonus</Type>		
+		<Bonus>rogueskillpoint</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bonusloreskillpoint</Id>
+		<Name>Give Bonus Lore Skill Points</Name>
+		<Description>Give the character bonus lore skill points.</Description>
+		<Type>bonus</Type>		
+		<Bonus>loreskillpoint</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bonusmagicskillpoint</Id>
+		<Name>Give Bonus Magic Skill Points</Name>
+		<Description>Give the character bonus magic skill points.</Description>
+		<Type>bonus</Type>		
+		<Bonus>magicskillpoint</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>bonusspecialskillpoint</Id>
+		<Name>Give Bonus Special Skill Points</Name>
+		<Description>Give the character bonus special skill points.</Description>
+		<Type>bonus</Type>		
+		<Bonus>specialskillpoint</Bonus>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	
+	<Effect>
+		<Id>trulyskillful</Id>
+		<Name>Truly Skillful</Name>
+		<Description>Allows a character to improve their skills past 100 to 200.</Description>
+		<Type>trulyskillful</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>
+	<Effect>
+		<Id>trulyamazing</Id>
+		<Name>Truly Amazing</Name>
+		<Description>Allows a character to improve their attributes past 40 to 100.</Description>
+		<Type>trulyamazing</Type>
+		<SpellMaking>
+			<UsedInSpellMaking>No</UsedInSpellMaking>
+		</SpellMaking>
+		<Enchanting>
+			<UsedInEnchanting>No</UsedInEnchanting>
+		</Enchanting>
+	</Effect>	
+</Effects>

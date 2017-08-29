@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Humanoid: Human, Dwarf, Elf, Hobbit, Gnome, Dark Elf
+	Beast: Orc, Minotaur, Ogre, Fe-lion, Rattus, Werewolf, Draconian, Lizardman
+	Outsider: Seraphim, Demonspawn, Ignis (Fire), Hydros (Water), Granote (Earth), Aetheri (Air) 
+	Undead: Lich, Wampyri
+-->
+<RacialGroups>
+	<RacialGroup>
+		<Id>humanoid</Id>
+		<Name>Humanoid</Name>
+		<Description>Humanoid races are the standard fantasy races that are defined as having an appearance or character resembling that of a human or being closely related to humans in size and shape.</Description>
+	</RacialGroup>
+	<RacialGroup>
+		<Id>beast</Id>
+		<Name>Beast Race</Name>
+		<Description>The beast races differ from humanoid races in that... they are more bestial?</Description>
+	</RacialGroup>
+	<RacialGroup>
+		<Id>outsider</Id>
+		<Name>Outsider</Name>
+		<Description>Outsider races take all or some of their ancestry from beings native to other realms.</Description>
+	</RacialGroup>
+	<RacialGroup>
+		<Id>undead</Id>
+		<Name>Undead</Name>
+		<Description>Undead are beings who are neither living nor dead, they were once humanoids who have through some means achieved a type of immortality.</Description>
+	</RacialGroup>	
+	<RacialGroup>
+		<Id>construct</Id>
+		<Name>Construct</Name>
+		<Description>...</Description>
+	</RacialGroup>	
+	<RacialGroup>
+		<Id>animal</Id>
+		<Name>Animal</Name>
+		<Description>...</Description>
+	</RacialGroup>	
+	<RacialGroup>
+		<Id>plant</Id>
+		<Name>Plant</Name>
+		<Description>...</Description>
+	</RacialGroup>	
+	<RacialGroup>
+		<Id>dragon</Id>
+		<Name>Dragon</Name>
+		<Description>...</Description>
+	</RacialGroup>	
+	<RacialGroup>
+		<Id>reptile</Id>
+		<Name>Reptile</Name>
+		<Description>Non dragon reptiles.</Description>
+	</RacialGroup>	
+	<RacialGroup>
+		<Id>spirit</Id>
+		<Name>Spirit</Name>
+		<Description>Non undead spirits.</Description>
+	</RacialGroup>	
+</RacialGroups>

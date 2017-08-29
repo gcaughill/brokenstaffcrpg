@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--	
+	Interfaces or menu system for Character Generator and Combat Simulator (CGACS)	
+-->
+<Interfaces>
+	<Interface>
+		<Id>main</Id>
+		<Name>Main Menu</Name>
+		<Title>Broken Staff CRPG - Character Generator and Battle Simulator v#VERSION#</Title>
+		<Menu>
+			<MenuItem>
+				<Id>start</Id>
+				<Name>#Start Adventure</Name>
+				<Interface>start</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>parties</Id>
+				<Name>#Parties</Name>
+				<Interface>parties</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>characters</Id>
+				<Name>#Character Database</Name>
+				<Interface>characters</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>about</Id>
+				<Name>#Broken Staff Studios</Name>
+				<Interface>about</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>documentation</Id>
+				<Name>Br#oken Staff CRPG System</Name>
+				<Interface>documentation</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>exit</Id>
+				<Name>E#xit</Name>
+				<Interface>exit</Interface>
+			</MenuItem>
+		</Menu>
+	</Interface>
+	<Interface>
+		<Id>about</Id>
+		<Name>About Broken Staff Studios</Name>
+		<Title>Broken Staff CRPG - Character Generator and Battle Simulator v#VERSION#</Title>
+		<Menu>
+			<MenuItem>
+				<Id>website</Id>
+				<Name>#Website</Name>
+				<Interface>http://www.brokenstaffstudios.com/</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>main</Id>
+				<Name>#Main Menu</Name>
+				<Interface>main</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>exit</Id>
+				<Name>E#xit</Name>
+				<Interface>exit</Interface>
+			</MenuItem>
+		</Menu>
+	</Interface>
+	<Interface>
+		<Id>documentation</Id>
+		<Name>Broken Staff CRPG System</Name>
+		<Title>Broken Staff CRPG - Character Generator and Battle Simulator v#VERSION#</Title>
+		<Menu>
+			<MenuItem>
+				<Id>main</Id>
+				<Name>#Main Menu</Name>
+				<Interface>main</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>exit</Id>
+				<Name>E#xit</Name>
+				<Interface>exit</Interface>
+			</MenuItem>
+		</Menu>
+	</Interface>
+	<Interface>
+		<Id>parties</Id>
+		<Name>Party List</Name>
+		<Title>Broken Staff CRPG - Character Generator and Battle Simulator v#VERSION#</Title>
+		<Menu>
+			<MenuItem>
+				<Id>createparty</Id>
+				<Name>#Create New Party</Name>
+				<Interface>createparty</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>editparty</Id>
+				<Name>#View / Edit Current Party</Name>
+				<Interface>editparty</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>deleteparty</Id>
+				<Name>#Delete Current Party</Name>
+				<Interface>deleteparty</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>main</Id>
+				<Name>#Main Menu</Name>
+				<Interface>main</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>exit</Id>
+				<Name>E#xit</Name>
+				<Interface>exit</Interface>
+			</MenuItem>
+		</Menu>
+	</Interface>
+	<Interface>
+		<Id>createparty</Id>
+		<Name>Create New Party</Name>
+		<Title>Broken Staff CRPG - Character Generator and Battle Simulator v#VERSION#</Title>
+		<Menu>
+			<MenuItem>
+				<Id>createcharacter</Id>
+				<Name>#Create New Character</Name>
+				<Interface>createcharacter</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>editcharacter</Id>
+				<Name>#View / Edit Current Character</Name>
+				<Interface>editcharacter</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>deletecharacter</Id>
+				<Name>#Delete Current Character</Name>
+				<Interface>deletecharacter</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>saveparty</Id>
+				<Name>#Save Party</Name>
+				<Interface>saveparty</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>returntoparty</Id>
+				<Name>#Return to Party Screen</Name>
+				<Interface>parties</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>exit</Id>
+				<Name>E#xit</Name>
+				<Interface>exit</Interface>
+			</MenuItem>
+		</Menu>
+	</Interface>
+	<Interface>
+		<Id>characters</Id>
+		<Name>Character Database</Name>
+		<Title>Broken Staff CRPG - Character Generator and Battle Simulator v#VERSION#</Title>
+		<Menu>
+			<MenuItem>
+				<Id>createcharacter</Id>
+				<Name>#Create New Character</Name>
+				<Interface>createcharacter</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>editcharacter</Id>
+				<Name>#View / Edit Current Character</Name>
+				<Interface>editcharacter</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>deletecharacter</Id>
+				<Name>#Delete Current Character</Name>
+				<Interface>deletecharacter</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>returntomain</Id>
+				<Name>#Return to Party Screen</Name>
+				<Interface>main</Interface>
+			</MenuItem>
+			<MenuItem>
+				<Id>exit</Id>
+				<Name>E#xit</Name>
+				<Interface>exit</Interface>
+			</MenuItem>
+		</Menu>
+	</Interface>
+</Interfaces>

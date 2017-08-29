@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Warrior: Fighter, Berserker, Ranger, Paladin, Blackguard, Spellsword
+	rogue: Adventurer, Thief, Bard, Assassin, Spy, Swashbuckler
+	Spellcaster: Mage, Warlock, Necromancer, Priest, Druid, Psionic
+	**
+	Future Eastern Add-On?: Samurai, Ninja, Monk, Wu-Jen
+-->
+<ClassGroups>
+	<ClassGroup>
+		<Id>warrior</Id>
+		<Name>Warrior</Name>
+		<Description>Specializing in combat.</Description>
+	</ClassGroup>
+	<ClassGroup>
+		<Id>rogue</Id>
+		<Name>Rogue</Name>
+		<Description>Quick witted, don't look to combat first types.</Description>
+	</ClassGroup>
+	<ClassGroup>
+		<Id>spellcaster</Id>
+		<Name>Spellcaster</Name>
+		<Description>Specializing in a type of magic.</Description>
+	</ClassGroup>
+</ClassGroups>

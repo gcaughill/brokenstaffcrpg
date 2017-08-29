@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Spell Books:
+	
+	Arcane: Mages, Spellswords, Bards, Adventurers
+	Infernal: Warlocks
+	Necromancy: Necromancers, Blackguards
+	Divine: Priests, Paladins, Bards, Adventurers
+	Nature: Druids, Rangers
+	Mental: Psionics, Spies, Bards
+	Abilities: For Special Abilities, Cast X times per day for free maximum
+	
+	Spell Opposition Groups:
+	Arcane vs Mental
+	Infernal vs Divine
+	Necromancy vs Nature
+	
+	Two other header xml files needed before Spells.xml:
+	Spell Types
+	Spell Levels
+-->
+<SpellBooks>
+  <SpellBook>
+	<Id>arcane</Id>
+    <Name>Arcane</Name>
+    <Description>Standard spellbook used by mages, bards, spellswords and adventurers.</Description>
+  </SpellBook>
+  <SpellBook>
+	<Id>infernal</Id>
+    <Name>Infernal</Name>
+    <Description>Dark magic used by warlocks.</Description>
+  </SpellBook>
+  <SpellBook>
+	<Id>necromancy</Id>
+    <Name>Necromancy</Name>
+    <Description>Black magic used by necromancers and blackguards.</Description>
+  </SpellBook>
+  <SpellBook>
+	<Id>divine</Id>
+    <Name>Divine</Name>
+    <Description>Holy magic used by priests, paladins, bards and adventurers.</Description>
+  </SpellBook>
+  <SpellBook>
+	<Id>nature</Id>
+    <Name>Nature</Name>
+    <Description>Nature based magic used by druids and rangers.</Description>
+  </SpellBook>
+  <SpellBook>
+	<Id>mental</Id>
+    <Name>Mental</Name>
+    <Description>The magic of telepaths, telekinesis and illusion used by psionics, spies and adventurers.</Description>
+  </SpellBook>
+  <SpellBook>
+	<Id>abilities</Id>
+    <Name>Special Abilities</Name>
+    <Description>Special abilities, not part of a 'real' spellbook.</Description>
+  </SpellBook>
+</SpellBooks>

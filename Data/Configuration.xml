@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Configuration
+	
+	System settings
+	Game specific settings
+-->
+<Configuration>
+	<Setting>
+		<Id>ProgramVersion</Id>
+		<Description>CGABS version.</Description>
+		<Value>0.1</Value>
+	</Setting>
+	<Setting>
+		<Id>ProgramRelease</Id>
+		<Description>CGABS release date.</Description>
+		<Value>2014/11/15</Value>
+	</Setting>
+	<Setting>
+		<Id>Version</Id>
+		<Description>Game system version.</Description>
+		<Value>0.4</Value>
+	</Setting>
+	<Setting>
+		<Id>MaximumNumberOfPlayerCharacters</Id>
+		<Description>The maximum number of player characters a party can have.</Description>
+		<Value>6</Value>
+	</Setting>
+	<Setting>
+		<Id>MaximumNumberOfRPCs</Id>
+		<Description>The maximum number of recruitable non-player characters a party can have.</Description>
+		<Value>2</Value>
+	</Setting>
+	<Setting>
+		<Id>MaximumExperience</Id>
+		<Description>The maximum amount of experience a character can attain.</Description>
+		<Value>200000000</Value>
+	</Setting>
+	<Setting>
+		<Id>AllowPersonalityTraits</Id>
+		<Description>All personality traits, a special type of character feat chosen on character generation.</Description>
+		<Value>Yes</Value>
+	</Setting>
+	<Setting>
+		<Id>RandomPersonalityTraits</Id>
+		<Description>Are personality traits random? If no, then the player can choose them.</Description>
+		<Value>No</Value>
+	</Setting>
+	<Setting>
+		<Id>NumberOfPersonalityTraits</Id>
+		<Description>The number of personality traits given on character generation.</Description>
+		<Value>1</Value>
+	</Setting>
+	<Setting>
+		<Id>CharacterStatSystem</Id>
+		<Description>The type of character system to use, point buy, random or hybrid.</Description>
+		<Value>PointBuy</Value>
+	</Setting>
+	<Setting>
+		<Id>CharacterStatSystemPointBuyNumberOfPoints</Id>
+		<Description>The number of points characters can add to their stats.</Description>
+		<Value>4</Value>
+	</Setting>
+	<Setting>
+		<Id>CharacterStatSystemPointBuyNegativePointValue</Id>
+		<Description>The number of points characters gain for lowering their stats.</Description>
+		<Value>0.5</Value>
+	</Setting>
+	<Setting>
+		<Id>CharacterStatSystemRandomDiceOne</Id>
+		<Description>The number of points characters can add to their stats.</Description>
+		<Value>4</Value>
+	</Setting>
+	<Setting>
+		<Id>CharacterStatSystemRandomDiceTwo</Id>
+		<Description>The number of points characters can add to their stats.</Description>
+		<Value>8</Value>
+	</Setting>
+	<Setting>
+		<Id>CharacterStatSystemRandomHybridNumberOfPoints</Id>
+		<Description>The number of points characters can add to their stats using the hybrid system.</Description>
+		<Value>1</Value>
+	</Setting>
+	<Setting>
+		<Id>CharacterStatSystemRandomDiceDiscardLowest</Id>
+		<Description>If the player can discard the lowest dice. If it is 4D8, they throw the lowest away.</Description>
+		<Value>Yes</Value>
+	</Setting>
+	<Setting>
+		<Id>RestingRateHP</Id>
+		<Description>The amount of health points that are healed when resting.</Description>
+		<Value>50</Value>
+	</Setting>
+	<Setting>
+		<Id>RestingRateSP</Id>
+		<Description>The amount of stamina points that are healed when resting.</Description>
+		<Value>500</Value>
+	</Setting>
+	<Setting>
+		<Id>RestingRateMP</Id>
+		<Description>The amount of magic points that are healed when resting.</Description>
+		<Value>50</Value>
+	</Setting>
+	<Setting>
+		<Id>AttackSPCost</Id>
+		<Description>The amount of stamina points that are used when making an attack.</Description>
+		<Value>1</Value>
+	</Setting>
+	<Setting>
+		<Id>CombatingRestingSP</Id>
+		<Description>The amount of stamina points that are restored when resting during combat.</Description>
+		<Value>10</Value>
+	</Setting>	
+</Configuration>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Weapon:
+	Body: (armour)
+	Helmet:
+	Hand:
+	Foot:
+	Ring:
+	Amulet:
+	Belt:
+	Cloak:
+	Potion:
+	Scroll:
+	Book:
+	Instrument:
+	Misc: quest, usable, other, junk
+-->
+<ItemTypes>
+  <ItemType>
+	<Id>weapon</Id>
+    <Name>Weapon</Name>
+    <Description>Weapon</Description>
+  </ItemType>
+  <ItemType>
+	<Id>shield</Id>
+    <Name>Shield</Name>
+    <Description>Shield</Description>
+  </ItemType>
+  <ItemType>
+	<Id>body</Id>
+    <Name>Body</Name>
+    <Description>Body / torso clothing or armour.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>head</Id>
+    <Name>Head</Name>
+    <Description>Head item ie. helmet.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>hand</Id>
+    <Name>Hand</Name>
+    <Description>Gloves, gauntlets, bracers.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>foot</Id>
+    <Name>Foot</Name>
+    <Description>Sandals, boots, foot armour.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>ring</Id>
+    <Name>Ring</Name>
+    <Description>Rings.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>amulet</Id>
+    <Name>Amulet</Name>
+    <Description>Necklaces and amulets.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>belt</Id>
+    <Name>Belt</Name>
+    <Description>Belts, girdles etc.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>cloak</Id>
+    <Name>Cloak</Name>
+    <Description>Cloaks</Description>
+  </ItemType>
+  <ItemType>
+	<Id>potion</Id>
+    <Name>Potion</Name>
+    <Description>Potions</Description>
+  </ItemType>
+  <ItemType>
+	<Id>poison</Id>
+    <Name>Poison</Name>
+    <Description>Poison that can be added to an edged or ranged weapon.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>ingredient</Id>
+    <Name>Ingredient</Name>
+    <Description>Item that can be used to make potions, salves, poisons and other concoctions.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>scroll</Id>
+    <Name>Scroll</Name>
+    <Description>scroll</Description>
+  </ItemType>
+  <ItemType>
+	<Id>book</Id>
+    <Name>Book</Name>
+    <Description>A book. You read them.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>wand</Id>
+    <Name>Wand</Name>
+    <Description>A magic wand.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>book</Id>
+    <Name>Book</Name>
+    <Description>Regular books and spellbooks</Description>
+  </ItemType>
+  <ItemType>
+	<Id>instrument</Id>
+    <Name>Instrument</Name>
+    <Description>Bardic instrument.</Description>
+  </ItemType>
+  <ItemType>
+	<Id>misc</Id>
+    <Name>Misc</Name>
+    <Description>Quest items, usable other items, junk etc.</Description>
+  </ItemType>
+</ItemTypes>

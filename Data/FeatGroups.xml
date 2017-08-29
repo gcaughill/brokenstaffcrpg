@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Feats
+
+	Passive: Racial
+	Triggered: Combat, Non-combat, Abilities, Powers
+-->
+<FeatGroups>
+	<FeatGroup>
+		<Id>passive</Id>
+		<Name>Passive Feats</Name>
+		<Description>Passive feats that are automatically applied to character. Includes racial feats.</Description>
+	</FeatGroup>
+	<FeatGroup>
+		<Id>triggered</Id>
+		<Name>Triggered Feats</Name>
+		<Description>Abilities and powers the character must trigger. Depending on feat can be used outside combat, in combat or both.</Description>
+	</FeatGroup>
+	<FeatGroup>
+		<Id>personality</Id>
+		<Name>Character Personality Feats</Name>
+		<Description>Characters can choose one personality feat at character creation if the system is turned on.</Description>
+	</FeatGroup>
+</FeatGroups>

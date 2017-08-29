@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+-->
+<Encounters>	
+	<Encounter>
+		<Id></Id>
+		<Name></Name>
+		<Description></Description>
+		<PartyMinLevel></PartyMinLevel>
+		<PartyMaxLevel></PartyMaxLevel>
+		<Chance></Chance>
+		<OneOff></OneOff>
+		<Monsters>
+			<Monster>
+				<Id></Id>
+				<MinQuantity></MinQuantity>
+				<MaxQuantity></MaxQuantity>
+			</Monster>
+		</Monsters>
+		<Loot>
+			<Item>
+				<Id></Id>
+				<MinQuantity></MinQuantity>
+				<MaxQuantity></MaxQuantity>			
+			</Item>
+		</Loot>
+	</Encounter>
+</Encounters>

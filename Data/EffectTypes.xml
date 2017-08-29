@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Damage: Damage Types & Attribute Damaged (HP,SP,MP)
+	Healing: Heal HP, Heal SP, Heal MP
+	Character: Give XP, Change Sex, Give Item, Remove Item, Set Attribute, Set Skill, Set Resistance, Set Saving Throw, Give Feat, Remove Feat
+	GameWorld: Open Lock, Teleport, Quest, 
+-->
+<EffectTypes>
+	<EffectType>
+		<Id>damage</Id>
+		<Name>Damage</Name>
+		<Description>Damage based effects</Description>
+	</EffectType>
+	<EffectType>
+		<Id>healing</Id>
+		<Name>Healing</Name>
+		<Description>Healing based effects</Description>
+	</EffectType>
+	<EffectType>
+		<Id>character</Id>
+		<Name>Character</Name>
+		<Description>Character based effects</Description>
+	</EffectType>
+	<EffectType>
+		<Id>gameworld</Id>
+		<Name>Game World</Name>
+		<Description>Game world based effects.</Description>
+	</EffectType>
+	<EffectType>
+		<Id>attributebonus</Id>
+		<Name>Attribute Bonus</Name>
+		<Description>Character attribute based effects.</Description>
+	</EffectType>
+	<EffectType>
+		<Id>skillbonus</Id>
+		<Name>Skill Bonus</Name>
+		<Description>Character skill based effects.</Description>
+	</EffectType>
+</EffectTypes>

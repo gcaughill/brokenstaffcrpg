@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Party file, lists all the available parties to start games with. This information is stored in save game
+	files.
+-->
+<Parties>
+	<Party>
+		<Id>party1</Id>
+		<Name>Starter Party</Name>
+		<Description>This is a well rounded party that serve as a great introduction to the CRPG system.</Description>
+		<Tagline>Ready to adventure!</Tagline>
+		<Gold>50</Gold>	
+		<Characters>
+			<Character>
+				<Id>char1</Id>
+				<IsLeader>Yes</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char2</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char3</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char4</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char5</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char6</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+		</Characters>
+	</Party>
+	<Party>
+		<Id>party2</Id>
+		<Name>Evil Party</Name>
+		<Description>Someone will want to play them.</Description>
+		<Tagline>Stick a knife in 'em, they're done!</Tagline>
+		<Gold>50</Gold>	
+		<Characters>
+			<Character>
+				<Id>char7</Id>
+				<IsLeader>Yes</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char8</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char9</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char10</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char11</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char12</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+		</Characters>
+	</Party>
+	<Party>
+		<Id>party3</Id>
+		<Name>Nature Party</Name>
+		<Description>A party of tree-hugging environmentalists... get 'em!</Description>
+		<Tagline>Hug a tree!</Tagline>
+		<Gold>50</Gold>	
+		<Characters>
+			<Character>
+				<Id>char13</Id>
+				<IsLeader>Yes</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char14</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char15</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char16</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char17</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+			<Character>
+				<Id>char18</Id>
+				<IsLeader>No</IsLeader>
+				<IsRPC>No</IsRPC>
+			</Character>
+		</Characters>
+	</Party>
+</Parties>

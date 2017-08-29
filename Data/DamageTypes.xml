@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+		Slashing-physical
+		Piercing-physical
+		Blunt-physical
+		Energy-magic
+		Fire-element
+		Water-element
+		(Earth element is one of the physical types, blunt)
+		Air-element
+		(Air element is one of the physical types, slashing or piercing)
+		Nuclear-fire energy
+		Ice-water energy
+		Acid-earth energy
+		Lightning-air energy
+		Holy
+		Unholy
+		Poison
+-->
+<DamageTypes>
+	<DamageType>
+		<Id>slashing</Id>
+		<Name>Slashing</Name>
+		<Description>Physical slashing damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>piercing</Id>
+		<Name>Piercing</Name>
+		<Description>Physical piercing damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>blunt</Id>
+		<Name>Blunt</Name>
+		<Description>Physical blunt, crushing damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>fire</Id>
+		<Name>Fire</Name>
+		<Description>Fire elemental damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>water</Id>
+		<Name>Water</Name>
+		<Description>Water elemental damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>nuclear</Id>
+		<Name>Hellfire</Name>
+		<Description>Non-natural fire energy damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>ice</Id>
+		<Name>Ice</Name>
+		<Description>Water (cold/ice) energy damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>acid</Id>
+		<Name>Acid</Name>
+		<Description>Earth (acid) energy damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>lightning</Id>
+		<Name>Lightning</Name>
+		<Description>Air (lightning) energy damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>energy</Id>
+		<Name>Energy</Name>
+		<Description>Non-elemental magical energy damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>holy</Id>
+		<Name>Holy</Name>
+		<Description>Holy damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>unholy</Id>
+		<Name>Unholy</Name>
+		<Description>Unholy damage.</Description>
+	</DamageType>
+	<DamageType>
+		<Id>poison</Id>
+		<Name>Poison</Name>
+		<Description>Poison damage.</Description>
+	</DamageType>
+</DamageTypes>
